@@ -1,0 +1,120 @@
+@media only screen and (max-width: 823px) {
+  .period-content {
+    flex-direction: column;
+  }
+  .period-buttons-block {
+    margin-top: 14px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .btn-grp {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center !important;
+  }
+  .period-buttons-block {
+    flex-direction: column;
+    height: 7rem !important;
+  }
+  .period-buttons-block .left-buttons {
+    margin-right: 0 !important;
+  }
+
+  .period-buttons-block div:last-child {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .period-buttons-block button:nth-child(2n + 1) {
+    margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 579px) {
+  .period-buttons-block .left-buttons {
+    margin-right: 15px;
+  }
+  .period-buttons-block {
+    height: 5rem;
+    justify-content: space-between;
+  }
+
+  .period-buttons-block .left-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .left-buttons button:first-child {
+    margin-right: 0 !important;
+  }
+}
+
+.period {
+  background-color: transparent;
+  padding: 9px 0 0;
+}
+
+.period-title {
+  width: -webkit-fill-available;
+  text-align: right;
+  color: var(--darkpink);
+  margin-right: 47px;
+  margin-bottom: 5px;
+}
+
+.period-content {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+}
+
+.period-text {
+  color: var(--darkblue);
+  font-weight: bold;
+}
+
+.period-buttons-block {
+  display: flex;
+}
+.period-buttons-block .left-buttons {
+  margin-right: 34px;
+}
+
+.left-buttons button:first-child {
+  margin-right: 5px;
+}
+
+.period-buttons-block button {
+  border: 1px solid var(--darkpink);
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.period-buttons-block button:nth-child(2n + 1) {
+  background-color: transparent;
+  color: var(--darkpink);
+}
+
+.period-buttons-block button:nth-child(2n + 1):hover {
+  background-color: var(--darkpink);
+  color: var(--white);
+}
+.period-buttons-block button:nth-child(2n) {
+  background-color: var(--darkpink);
+  color: var(--white);
+}
+
+.period-buttons-block button:nth-child(2n):hover {
+  background-color: var(--white);
+  color: var(--darkpink);
+}
+.btn-grp {
+  display: flex;
+  align-items: center;
+}
+
+.btn-grp svg {
+  margin-right: 10px;
+}

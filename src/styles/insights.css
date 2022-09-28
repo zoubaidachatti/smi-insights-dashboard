@@ -1,0 +1,149 @@
+.insights-content {
+  display: flex;
+}
+
+.insights-content .left-insight,
+.ins-right-block {
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  border-radius: 5px;
+}
+
+.ins-right-block {
+  width: 48%;
+}
+
+.ins-right-block .top-ins-card {
+  border-radius: 5px;
+  height: 13rem;
+}
+.instagram-card {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insights-content .left-insight {
+  margin-right: 24px;
+  padding: 20px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 23px 48px;
+  color: var(--gray);
+}
+
+.left-insight .insight-item {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.insights-content .right-insight {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ins-img {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 22px;
+}
+
+.ins-img img {
+  padding: 20px;
+}
+
+.ins-item-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.ins-item-description {
+  font-size: 12px;
+}
+
+.instagram-pic {
+  background-color: #f9c3c3;
+  border-radius: 50px;
+  padding: 10px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}
+
+.girl-smiling {
+  background-color: var(--lightpink);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom-ins-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.titre {
+  color: var(--gray);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.desc {
+  color: rgb(184, 180, 180);
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1008px) {
+  .insights-content {
+    flex-direction: column;
+  }
+  .insights-content .left-insight {
+    width: unset !important;
+    margin-right: unset !important;
+  }
+  .insights-content .right-insight {
+    width: unset !important;
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .insights-content .left-insight {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .girl-smiling img {
+    width: 100px;
+  }
+  .ins-right-block .top-ins-card {
+    height: 7rem;
+  }
+}
+
+@media only screen and (max-width: 476px) {
+  .ins-right-block {
+    width: unset !important;
+  }
+  .insights-content .right-insight {
+    flex-direction: column;
+  }
+  .ins-right-block {
+    margin-bottom: 20px;
+  }
+}

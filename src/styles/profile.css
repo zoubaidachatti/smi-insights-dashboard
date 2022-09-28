@@ -1,0 +1,38 @@
+.profile {
+  background-color: var(--white);
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-items: center;
+  padding: 5px 17px;
+  color: var(--darkblue);
+  border-radius: 5px;
+}
+
+.profile-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: var(--pink);
+  width: 33px;
+  height: 33px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-left: 9px;
+}
+
+.profile .username {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.profile .sur-text {
+  font-size: 12px;
+}
+
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
