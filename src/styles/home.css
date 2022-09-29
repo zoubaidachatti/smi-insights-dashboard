@@ -3,3 +3,9 @@
   width: -webkit-fill-available;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 356px) {
+  .home {
+    padding: 11px !important;
+  }
+}

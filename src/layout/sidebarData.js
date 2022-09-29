@@ -5,8 +5,8 @@ export const SidebarData = [
     src: "/images/menu/home.png",
   },
   {
-    title: "Calender",
-    path: "/calender",
+    title: "Calendar",
+    path: "/calendar",
     src: "/images/menu/calendar.png",
   },
   {

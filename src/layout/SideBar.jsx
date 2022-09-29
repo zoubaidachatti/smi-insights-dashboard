@@ -1,12 +1,34 @@
-import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../styles/sidebar.css";
 import { SidebarData } from "./sidebarData";
 const SideBar = () => {
-  const [selected, setSelected] = useState("Home");
+  const navigation = useSelector((state) => state.navigate);
+  const [isActive, setIsActive] = useState(false);
+  const navigate = useNavigate();
+  const wrapperRef = useRef(null);
+  const changeNav = (path) => {
+    navigate(path);
+  };
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsActive(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+  useOutsideAlerter(wrapperRef);
   return (
-    <div className="sidebar">
-      <div className="img-div">
+    <div ref={wrapperRef} className={isActive ? "sidebar-active" : "sidebar"}>
+      <div className={isActive ? "img-div-active" : "img-div"}>
         <img src="/images/logo.png" alt="logo" />
       </div>
       <div className="item-list-block">
@@ -14,13 +36,22 @@ const SideBar = () => {
           return (
             <div
               className={
-                selected === item.title
-                  ? "menu-item item-selected"
-                  : "menu-item"
+                `${
+                  navigation.states.name === item.title ? "item-selected" : ""
+                }` + `${isActive ? " menu-item-active" : " menu-item"}`
               }
               key={"menu_item_" + ind}
+              onClick={() => {
+                if (isActive) {
+                  changeNav(item.path);
+                } else {
+                  setIsActive(true);
+                  changeNav(item.path);
+                }
+              }}
             >
               <img src={item.src} alt={item.title} />
+              {isActive && <div className="menu-item-title">{item.title}</div>}
             </div>
           );
         })}

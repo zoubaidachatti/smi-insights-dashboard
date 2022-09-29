@@ -92,6 +92,7 @@
 .performance-item {
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
   border-radius: 5px;
+  background-color: var(--white);
   padding: 15px;
   display: flex;
   align-items: center;
@@ -171,6 +172,6 @@
 /* } */
 
 .circle-dashes {
-  stroke: var(--bg-color);
+  stroke: var(--white);
   fill: none;
 }
